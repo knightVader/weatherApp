@@ -75,12 +75,75 @@ let changeDate = async (city) => {
     dandt.innerText=`${mainData.day} ${months[mainData.month-1]} ${mainData.year}, ${mainData.time}`
 };
 
+let changeBackground=(data)=>{
+    let x=data.weather[0].main
+
+    switch(x){
+        case 'Clouds':{
+            document.querySelector(".cloud").classList.remove("none")
+            document.querySelector(".rain").classList.add("none")
+            document.querySelector(".snow").classList.add("none")
+            document.querySelector(".thunderstorm").classList.add("none")
+            document.querySelector(".misthaze").classList.add("none")
+        }
+        break;
+        case 'Rain':{
+            document.querySelector(".rain").classList.remove("none")
+            document.querySelector(".cloud").classList.add("none")
+            document.querySelector(".snow").classList.add("none")
+            document.querySelector(".thunderstorm").classList.add("none")
+            document.querySelector(".misthaze").classList.add("none")
+        }
+        break;
+        case 'Snow':{
+            document.querySelector(".snow").classList.remove("none")
+            document.querySelector(".cloud").classList.add("none")
+            document.querySelector(".rain").classList.add("none")
+            document.querySelector(".thunderstorm").classList.add("none")
+            document.querySelector(".misthaze").classList.add("none")
+        }
+        break;
+        case 'Thunderstorm':{
+            document.querySelector(".thunderstorm").classList.remove("none")
+            document.querySelector(".snow").classList.add("none")
+            document.querySelector(".cloud").classList.add("none")
+            document.querySelector(".rain").classList.add("none")
+            document.querySelector(".misthaze").classList.add("none")
+        }
+        break;
+        case 'Mist':{
+            document.querySelector(".misthaze").classList.remove("none")
+            document.querySelector(".thunderstorm").classList.add("none")
+            document.querySelector(".snow").classList.add("none")
+            document.querySelector(".cloud").classList.add("none")
+            document.querySelector(".rain").classList.add("none")
+        }
+        break;
+        case 'Haze':{
+            document.querySelector(".misthaze").classList.remove("none")
+            document.querySelector(".thunderstorm").classList.add("none")
+            document.querySelector(".snow").classList.add("none")
+            document.querySelector(".cloud").classList.add("none")
+            document.querySelector(".rain").classList.add("none")
+        }
+        break;
+        default:{
+            document.querySelector(".misthaze").classList.add("none")
+            document.querySelector(".thunderstorm").classList.add("none")
+            document.querySelector(".snow").classList.add("none")
+            document.querySelector(".cloud").classList.add("none")
+            document.querySelector(".rain").classList.add("none")
+        }
+    }
+}
+
 let loadValues= async ()=>{
     let data=await weather_data("New delhi")
     country.innerText="New Delhi, India"
     changeWeather(data)
     changeTemperature(data)
     changeValues(data)
+    changeBackground(data)
     changeLogo(data)
     changeDate("New Delhi")
 }
@@ -90,11 +153,13 @@ loadValues()
 search.addEventListener("submit", async (e)=>{ // here form is used so when enter is presses or we move from form it gets submitted
     e.preventDefault();
     let cityName=document.querySelector("#cityname").value
+    document.querySelector("#cityname").value=""
     let data=await weather_data(cityName)
     changeName(cityName,data)
     changeWeather(data)
     changeTemperature(data)
     changeValues(data)
     changeLogo(data)
+    changeBackground(data)
     changeDate(cityName)
 })
