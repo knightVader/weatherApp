@@ -1,0 +1,145 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.shadow{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+video{
+    position: fixed;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 65%;
+    width: 75vmin;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.serach-parent{
+    width: 100%;
+}
+
+.search{
+    margin-top: 25px;
+    margin-left: 25px;
+    background-color: black;
+    color: white;
+    width: fit-content;
+    padding: 6px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search input{
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+::placeholder{
+    color: grey;
+    font-weight: 700;
+}
+
+.country-name{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#country{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#weather{
+    background-color: black;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 18px;
+    margin-top: 4px;
+}
+
+.temp{
+    font-size: 30px;
+}
+
+.min-max{
+    margin-top: 16px;
+    font-size: 14px;
+    display: flex;
+    gap: 15px;
+}
+
+img{
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.cards{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cards-1, .cards-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 50%;
+}
+
+.feels-like, .wind, .humidity, .pressure{
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 30%;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: small;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#value1, #value2, #value3, #value4{
+    font-weight: 700;
+}

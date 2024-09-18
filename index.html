@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="icon" type="image/png" href="./favi.png">
+
+</head>
+<body>
+    <video src="./background.mp4" autoplay muted loop id="myVideo"></video>
+    <div class="shadow"></div>
+    <div class="main">
+        <div class="serach-parent">
+            <form class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="search your city..." autocomplete="off" id="cityname">
+            </form>
+        </div>
+        <div class="country-name">
+            <p id="country"></p>
+            <p id="dandt"></p>
+            <p id="weather"></p>
+        </div>
+        <div class="logo"></div>
+        <div class="temperature">
+            <p class="temp"></p>
+        </div>
+        <div class="min-max">
+            <p id="min"></p>
+            <p id="max"></p>
+        </div>
+        <div class="cards">
+            <div class="cards-1">
+                <div class="feels-like">
+                    <img src="./logos/feels-like.png" alt="">
+                    <div class="feels-like-child">
+                        <p>Feels Like</p>
+                        <p id="value1"></p>
+                    </div>
+                </div>
+                <div class="humidity">
+                    <img src="./logos/humidity.png" alt="">
+                    <div class="humidity-child">
+                        <p>Humidity</p>
+                        <p id="value2"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-2">
+                <div class="wind">
+                    <img src="./logos/wind.png" alt="">
+                    <div class="wind-child">
+                        <p>Wind</p>
+                        <p id="value3"></p>
+                    </div>
+                </div>
+                <div class="pressure">
+                    <img src="./logos/pressure.png" alt="">
+                    <div class="pressurechild">
+                        <p>Pressure</p>
+                        <p id="value4"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
