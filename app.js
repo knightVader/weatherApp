@@ -1,4 +1,4 @@
-const URL_coordinates="http://api.openweathermap.org/geo/1.0/direct?q="
+const URL_coordinates="https://api.openweathermap.org/geo/1.0/direct?q="
 const URL="https://api.openweathermap.org/data/2.5/weather?"
 
 const months=["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
