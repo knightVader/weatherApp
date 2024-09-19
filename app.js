@@ -155,6 +155,7 @@ search.addEventListener("submit", async (e)=>{ // here form is used so when ente
     let cityName=document.querySelector("#cityname").value
     document.querySelector("#cityname").value=""
     let data=await weather_data(cityName)
+    document.querySelector("#cityname").blur() // removes focus from the imput field
     changeName(cityName,data)
     changeWeather(data)
     changeTemperature(data)
